@@ -67,11 +67,12 @@
 
 /* Scrollable content below */
 .scrollable-content {
-  padding-top: 220px; /* Increase if needed */
+  padding-top: 240px; /* Enough space for header + form */
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 32px;
+  padding-bottom: 20px;
   overflow-y: auto;
+  min-height: 280px;
 }
 
 .navbar {
