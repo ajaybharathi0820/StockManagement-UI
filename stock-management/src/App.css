@@ -52,27 +52,25 @@
 
 .fixed-top-controls {
   position: fixed;
-  top: 70px; /* height of navbar */
+  top: 70px; /* below navbar */
   left: 0;
   right: 0;
-  padding: 8px 24px;
   background-color: #f9fafb;
   z-index: 999;
+  padding: 1rem 1.5rem;
   display: flex;
-  gap: 20px;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
 /* Scrollable content below */
 .scrollable-content {
-  padding-top: 240px; /* Enough space for header + form */
+  padding-top: 280px; /* Add more padding to leave space for fixed form */
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   overflow-y: auto;
-  min-height: 280px;
 }
 
 .navbar {
@@ -133,5 +131,24 @@
 /* Remove bottom button container spacing if it was present before */
 .report-btn-container {
   display: none;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .fixed-top-controls {
+    flex-direction: column;
+  }
 }
 

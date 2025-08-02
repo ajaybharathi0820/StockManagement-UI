@@ -10,6 +10,19 @@ interface Props {
   initialData?: Partial<MaterialEntry> | null;
 }
 
+
+// Bluetooth requirement
+// When buying:
+
+// “Is this BLE-enabled?”
+
+// “Does it expose GATT characteristics for reading weight?”
+
+// “Do you provide documentation or UUIDs?”
+
+// “Can it integrate with browser apps or Web Bluetooth?”
+
+
 let idCounter = 1;
 
 export default function EntryForm({ items, bagTypes, onAdd, initialData }: Props) {
